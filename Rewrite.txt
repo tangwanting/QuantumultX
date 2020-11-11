@@ -485,7 +485,6 @@ hostname = *.amemv.com, *.iydsj.com, *.k.sohu.com, *.kakamobi.cn, *.kingsoft-off
 # > Yahoo!
 ^https?+:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do url reject-200
 # > Youtube++
-^https?+:\/\/api\.catch\.gift\/api\/v\d\/pagead\/ url reject-200
 # > 萤石云视频
 ^https?+:\/\/i\.ys7\.com\/api\/ads url reject-200
 # > 阅达教育
