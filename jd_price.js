@@ -63,7 +63,7 @@ if (url.indexOf(path2) != -1) {
 
 function priceSummary(data) {
 	data = data.series[0]
-	let summary = `当前到手价: ${parseFloat(data.current / 100.0)}${getSpace(8)}最低: ${parseFloat(data.min / 100.0)}${getSpace(8)}最高: ${parseFloat(data.max / 100.0)}`;
+	let summary = `当前到手价    ¥ ${parseFloat(data.current / 100.0)}${getSpace(8)}最低: ${parseFloat(data.min / 100.0)}${getSpace(8)}最高: ${parseFloat(data.max / 100.0)}`;
 	const list = historySummary(data.data);
 	list.forEach((item, index) => {
 		summary += `\n${item.Name}${getSpace(8)}${item.Price}${getSpace(8)}${item.Date
