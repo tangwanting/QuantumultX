@@ -6,17 +6,17 @@
  *
  *************** Surge配置 ***********************
  * 推荐使用模块：
- * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.sgmodule
+ * https://raw.githubusercontent.com/tangwanting/QuantumultX/master/Tools/AutoPolicy/auto-policy.sgmodule
  * 手动配置：
  * [Script]
- * event network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.js
+ * event network-changed script-path=https://raw.githubusercontent.com/tangwanting/QuantumultX/master/Tools/AutoPolicy/auto-policy.js
  *
  *************** Loon配置 ***********************
  * 推荐使用插件：
- * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.plugin
+ * https://raw.githubusercontent.com/tangwanting/QuantumultX/master/Tools/AutoPolicy/auto-policy.plugin
  * 手动配置：
  * [Script]
- * network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.js
+ * network-changed script-path=https://raw.githubusercontent.com/tangwanting/QuantumultX/master/Tools/AutoPolicy/auto-policy.js
  *************** 脚本配置 ***********************
  * 推荐使用BoxJS配置。
  * BoxJS订阅：https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/box.js.json
