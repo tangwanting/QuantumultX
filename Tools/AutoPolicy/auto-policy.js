@@ -29,7 +29,7 @@ let config = {
   silence: false, // 是否静默运行，默认false
   cellular: "RULE", // 蜂窝数据下的模式，RULE代表规则模式，PROXY代表全局代理，DIRECT代表全局直连
   wifi: "RULE", // wifi下默认的模式
-  all_direct: ["WRT32X", "WRT32X Extreme"], // 指定全局直连的wifi名字
+  all_direct: ["OpenWrt", "OpenWrt_5G"], // 指定全局直连的wifi名字
   all_proxy: [], // 指定全局代理的wifi名字
   whitelist: ["𝑵𝒆𝒕𝒆𝒂𝒔𝒆 𝑴𝒖𝒔𝒊𝒄", "𝑨𝒅𝑮𝒖𝒂𝒓𝒅"],
 };
@@ -60,7 +60,7 @@ if (isSurge) {
 
 manager()
   .catch((err) => {
-    notify.post("🤖️ SSID 自动策略", `❌ 出现错误`, err);
+    notify.post("自动策略", `❌ 出现错误`, err);
     console.log("ERROR: " + err);
   })
   .finally(() => {
@@ -78,7 +78,7 @@ async function manager() {
   if (isSurge) {
     const v4_ip = $network.v4.primaryAddress;
     if (!config.silence && !v4_ip) {
-      notify.post("🤖️ SSID 自动策略", "❌ 当前无网络", "");
+      notify.post("自动策略", "❌ 当前无网络", "");
       return;
     }
   }
@@ -111,7 +111,7 @@ async function manager() {
   $persistentStore.write(targetMode, "surge_auto_policy_mode");
   if (!config.silence) {
     notify(
-      "🤖️ SSID 自动策略",
+      "自动策略",
       `当前网络：${ssid ? ssid : "蜂窝数据"}`,
       `${isSurge ? "Surge" : "Loon"}已切换至${lookupOutbound(targetMode)}`
     );
@@ -161,9 +161,9 @@ function getSSIDMode(ssid) {
 
 function lookupOutbound(mode) {
   return {
-    RULE: "🚦规则模式",
-    PROXY: "🚀全局代理模式",
-    DIRECT: "🎯全局直连模式",
+    RULE: "规则模式",
+    PROXY: "全局模式",
+    DIRECT: "直连模式",
   }[mode];
 }
 
