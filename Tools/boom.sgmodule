@@ -1,3 +1,6 @@
+#!name=Boom解锁
+#!desc=喜Boom解锁Pre
+#!system=ios   
 [rewrite_local]
 
 ^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/boom.js
